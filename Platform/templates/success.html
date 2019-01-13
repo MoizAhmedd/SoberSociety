@@ -1,0 +1,168 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Sober Society</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">SS</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">My Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'ChallengeView' %}">My Challenges</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'blog' %}">My Community</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'chat' %}">My Chat</a>
+            </li>
+            <li>
+              <a href = "{%url 'logout'%}"><button type="button" class="btn btn-light">Log Out</button></a>
+
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('/static/img/1.jpg')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="page-heading">
+              <h1>Sober Society</h1>
+              <span class="subheading">Our System</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <center><h1>Challenges</h1></center>
+          <p> We believe that a core aspect of breaking adddictions is through accountability. This allows the addicted user to know that someone is watching their progress, and is also there to support them.
+            Thus, the user is more likely to put in greater effort in breaking the addiction. Through our challenges system, users can create a challenge that helps them tackle their addiction. Other users can then join this challenge,
+            and both users are now accountable for each other and are there for moral support.
+            </p>
+
+          <center><a href = "{% url 'ChallengeView' %}"><button type="button" class="btn btn-dark">View Challenges</button></a></center>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <center><h1>Community Blog</h1></center>
+          <p> When tackling addictions, it is very important to be aware of your progress. There are a lot of different emotions that we experience when overcoming emotions, and it is important to realize
+            that these are simply emotions them selves. By writing about these topics, it will not only allow users to clear their mind, yet also allow other users to provide their own advice.
+            </p>
+
+          <center><a href = "{% url 'blog' %}"><button type="button" class="btn btn-dark">View Blog</button></a></center>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <center><h1>Community Chat</h1></center>
+          <p> Sometimes, emergencies come up and the urge to relapse becomes very strong. In times like these, a challenge or blog post may not be motivating enough to keep going.
+            For situations like these, on-demand support is very helpful. Therefore we have our chat system that allows you to talk to someone right away, and explain your emergency.
+            </p>
+
+          <center><a href = "{% url 'chat' %}"><button type="button" class="btn btn-dark">View Chat</button></a></center>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <ul class="list-inline text-center">
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="copyright text-muted">Copyright &copy; Sober Society 2018</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{static 'vendor/jquery/jquery.min.js'}"></script>
+    <script src="{static 'vendor/bootstrap/js/bootstrap.bundle.min.js'}"></script>
+
+    <!-- Custom scripts for this template -->
+
+  </body>
+
+</html>
